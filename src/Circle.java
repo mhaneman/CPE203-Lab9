@@ -5,14 +5,25 @@ public class Circle
     public static final double PI = 3.14159;
     private double radius;
 
-    public Circle() throws ZeroRadiusException
+    public Circle() throws ZeroRadiusException, NegativeRadiusException
     {
         Random rand = new Random();
         radius = rand.nextDouble()*10;
+
+        if(radius == 0)
+            throw new ZeroRadiusException();
+        if (radius < 0)
+            throw new ZeroRadiusException();
+
     }
-    public Circle(double radius) throws ZeroRadiusException
+    public Circle(double radius) throws ZeroRadiusException, NegativeRadiusException
     {
         this.radius = radius;
+
+        if(radius == 0)
+            throw new ZeroRadiusException();
+        if (radius < 0)
+            throw new ZeroRadiusException();
     }
 
     public double radius()
