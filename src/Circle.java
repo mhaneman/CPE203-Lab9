@@ -10,7 +10,7 @@ public class Circle
         Random rand = new Random();
         radius = rand.nextDouble()*10;
     }
-    public Circle(double radius) throws NegativeRadiusException
+    public Circle(double radius) throws ZeroRadiusException
     {
         this.radius = radius;
     }
