@@ -24,8 +24,8 @@ class NegativeRadiusException extends CircleException
         this.radius = radius;
     }
 
-    public void radius()
+    public double radius()
     {
-
+        return this.radius;
     }
 }
