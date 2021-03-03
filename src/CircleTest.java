@@ -4,11 +4,14 @@ public class CircleTest
     {
         try
         {
-            Circle c1 = new Circle(0);
+            Circle c1 = new Circle(-191);
             System.out.println(c1);
         }
-        catch (CircleException e) {
+        catch (ZeroRadiusException e) {
             System.out.println(e.getMessage());
+        }
+        catch (NegativeRadiusException e) {
+            System.out.println(e.getMessage() + ": " + e.radius());
         }
         finally {
             System.out.println("In finally.");
