@@ -13,7 +13,7 @@ public class Circle
         if(radius == 0)
             throw new ZeroRadiusException();
         if (radius < 0)
-            throw new ZeroRadiusException();
+            throw new NegativeRadiusException(radius);
 
     }
     public Circle(double radius) throws ZeroRadiusException, NegativeRadiusException
@@ -23,7 +23,7 @@ public class Circle
         if(radius == 0)
             throw new ZeroRadiusException();
         if (radius < 0)
-            throw new ZeroRadiusException();
+            throw new NegativeRadiusException(radius);
     }
 
     public double radius()
