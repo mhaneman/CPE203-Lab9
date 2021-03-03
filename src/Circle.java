@@ -5,7 +5,7 @@ public class Circle
     public static final double PI = 3.14159;
     private double radius;
 
-    public Circle()
+    public Circle() throws ZeroRadiusException
     {
         Random rand = new Random();
         radius = rand.nextDouble()*10;
